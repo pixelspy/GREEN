@@ -1,8 +1,8 @@
 # GREEN
 
-##Mini CMS : le projet permet de créer, modifier, et consulter des articles 
+## Mini CMS : le projet permet de créer, modifier, et consulter des articles 
 
-##Les critères techniques :
+## Les critères techniques :
  * git :
 	* chaque étape du projet est sauvegardée sur un dépôt GitHub ;
         
@@ -20,7 +20,7 @@
       tous les visiteurs peuvent consulter les articles -> session PHP.
 
 
-##Recommandations:
+## Recommandations:
 
  * Pensez aux outils comme Sass ou Bootstrap pour faciliter votre travail ;
  * Soyez ambitieux/euses, mais réalistes(, mais ambitieux/euses) ;
