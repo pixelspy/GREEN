@@ -1,0 +1,23 @@
+header {
+  border-bottom: 2px solid grey;
+
+}
+  figure {
+  border: 2px solid grey;
+}
+
+footer {
+  border-top: 2px solid grey;
+}
+
+.social {
+  display: flex;
+
+}
+
+.add-article {
+  margin-top: 30px;
+  border: 2px solid grey;
+  width: 650px;
+
+}
