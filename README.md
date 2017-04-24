@@ -20,7 +20,28 @@
       tous les visiteurs peuvent consulter les articles -> session PHP.
 
 
-## Recommandations:
+## Planning :
+
+ * lundi : 
+	* maquette et planning (mobile first, bootstrap, balsamiq) 
+
+ * mardi :
+	* matin : conception BDD, création des scripts MVC
+	* après-midi : mise en place page d'accueil et formulaire d' article (PHP + AngularJS)
+
+ * mercredi :
+	* matin : gestion utilisateur
+	* après-midi : fonctionnalités d'édition
+
+ * jeudi :
+	* matin : finalisation front (SASS)
+	* après-midi : finalisation front
+
+ * vendredi :
+	* matin : présentation
+
+
+## Recommandations :
 
  * Pensez aux outils comme Sass ou Bootstrap pour faciliter votre travail ;
  * Soyez ambitieux/euses, mais réalistes(, mais ambitieux/euses) ;
