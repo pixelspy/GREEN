@@ -31,10 +31,10 @@
   <section class="row">
 <?php foreach ($lastTen as $e) {
 
-echo '<div class="col-xs-12 col-lg-4">
+echo '<div class="cardArticles col-xs-12 col-lg-4">
       <a href="../controller/art_controller.php">
       <img src="../view/img/2.jpg" alt="">
-      <h2>' . $e["art_title"] . '</h2>
+      <h2 class="cardTitle">' . $e["art_title"] . '</h2>
       <p>' . $e["art_content"] . '</p></a>
     </div>';
 } ?>

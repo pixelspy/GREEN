@@ -16,7 +16,7 @@
     
  * le projet intègre au moins une page utilisant AngularJS.
 
- 	* un système de compte utilisateur : seul un utilisateur connecté peut créer et modifier un article ;
+ * un système de compte utilisateur : seul un utilisateur connecté peut créer et modifier un article ;
       tous les visiteurs peuvent consulter les articles -> session PHP.
 
 
@@ -29,12 +29,14 @@
 	* matin : conception BDD, création des scripts MVC
 	* après-midi : mise en place page d'accueil et formulaire d' article (PHP + AngularJS)
 
+
  * mercredi :
 	* matin : gestion utilisateur
-	* après-midi : fonctionnalités d'édition
+	* après-midi : Atelier FACE
+
 
  * jeudi :
-	* matin : finalisation front (SASS)
+	* matin : fonctionnalités d'édition, finalisation front (SASS)
 	* après-midi : finalisation front
 
  * vendredi :

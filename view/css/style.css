@@ -24,3 +24,13 @@ footer {
   width: 650px;
 
 }
+
+.cardArticles {
+  border: 2px solid grey;
+
+}
+
+.cardTitle{
+  border-top: 2px solid grey;
+
+}
