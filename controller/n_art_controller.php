@@ -6,7 +6,7 @@ $art_content = "";
 
 $added = false;
 
-if(isset($_POST['art_title']) and isset($_POST['art_content']) ){
+if(isset($_POST['art_title']) and isset($_POST['art_content'])){
   $art_title = $_POST['art_title'];
   $art_content = $_POST['art_content'];
 
