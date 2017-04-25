@@ -1,8 +1,11 @@
-header {
+.header {
   border-bottom: 2px solid grey;
+  display: flex;
+  align-items: center;
 
 }
-  figure {
+
+figure {
   border: 2px solid grey;
 }
 
