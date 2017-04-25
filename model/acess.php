@@ -1,13 +1,7 @@
 <?php
 
 function addArticle($title, $content) {
-  try {
-
-    $bdd = new PDO('mysql:host=localhost;dbname=blog_cms;charset=utf8', 'phpmyadmin', 'simplon');
-  }
-  catch(Exception $e){
-    die('Erreur : ' .$e->getMessage());
-  }
+  include 'bdd.php';
 
   $req = $bdd->prepare('INSERT INTO post_articles(art_title, art_content) VALUES(:art_title, :art_content)');
   $req->execute(array(
@@ -16,4 +10,21 @@ function addArticle($title, $content) {
   ));
 
   return true;
+  $req->closeCursor();
+}
+
+
+function lastArticle() {
+  include 'bdd.php';
+  $req = $bdd->query('SELECT * FROM post_articles ORDER BY art_id DESC LIMIT 1');
+  return $req;
+
+}
+
+
+function lastTenArticle() {
+  include 'bdd.php';
+  $req = $bdd->query('SELECT * FROM post_articles ORDER BY art_id DESC LIMIT 0, 9');
+  return $req;
+
 }

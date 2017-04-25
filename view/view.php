@@ -12,51 +12,34 @@
   <?php include 'header.php'; ?>
 
   <main class="row">
+<?php foreach ($last as $key) { ?>
+
     <div class="row">
       <img class="col-xs-12 col-lg-6" src="../view/img/1.jpg" alt="">
       <div class="col-xs-12 col-lg-6">
-        <h1>Aloe Vera!</h1>
-        <h2>We love it, this is why ...</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+        <h1>Last Article</h1>
+        <h2><?php echo $key['art_title'];?></h2>
+        <p><?php echo $key['art_content'];?></p>
       </div>
     </div>
+<?php } ?>
+
     <div class="row">
       <h1 class="col-xs-12 col-lg-12">Last articles</h1>
     </div>
-    <section class="row">
-      <a href="../controller/art_controller.php"><figure class="col-xs-12 col-lg-4">
-        <img src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci</p>
-      </figure></a>
-      <figure class="col-xs-12 col-lg-4">
-        <img  src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
-      </figure>
-      <figure class="col-xs-12 col-lg-4">
-        <img  src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do eiusmod . </p>
-      </figure>
+
+  <section class="row">
+<?php foreach ($lastTen as $e) {
+
+echo '<div class="col-xs-12 col-lg-4">
+      <a href="../controller/art_controller.php">
+      <img src="../view/img/2.jpg" alt="">
+      <h2>' . $e["art_title"] . '</h2>
+      <p>' . $e["art_content"] . '</p></a>
+    </div>';
+} ?>
     </section>
-    <section class="row">
-      <figure class="col-xs-12 col-lg-4">
-        <img src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci</p>
-      </figure>
-      <figure class="col-xs-12 col-lg-4">
-        <img  src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
-      </figure>
-      <figure class="col-xs-12 col-lg-4">
-        <img  src="../view/img/2.jpg" alt="">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do eiusmod . </p>
-      </figure>
-    </section>
+
   </main>
 
   <footer class="row">
