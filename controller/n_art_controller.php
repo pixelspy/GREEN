@@ -1,5 +1,5 @@
 <?php
-require '../model/acess.php';
+require '../model/access.php';
 
 $art_title = "";
 $art_content = "";

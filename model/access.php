@@ -8,8 +8,8 @@ function addArticle($title, $content) {
     'art_title' => $title,
     'art_content' => $content
   ));
-  return true;
   $req->closeCursor();
+  return true;
 }
 
 function lastArticle() {
@@ -26,19 +26,29 @@ function lastTenArticle() {
 
 function addUsr($name, $email, $pwd) {
   include 'bdd.php';
-
   $req = $bdd->prepare('INSERT INTO new_users(n_usr_name, usr_email, n_usr_password) VALUES(:n_usr_name, :usr_email, :n_usr_password)');
   $req->execute(array(
     'n_usr_name' => $name,
     'usr_email' => $email,
     'n_usr_password' => $pwd
   ));
-  return true;
   $req->closeCursor();
+  return true;
 }
 
-function lastUsr() {
+// function lastUsr() {
+//   include 'bdd.php';
+//   $req = $bdd->query('SELECT n_usr_name FROM new_users ORDER BY n_usr_id DESC LIMIT 1');
+//   return $req;
+// }
+
+function verifUsr() {
   include 'bdd.php';
-  $req = $bdd->query('SELECT n_usr_name FROM new_users ORDER BY n_usr_id DESC LIMIT 1');
-  return $req;
+  $resp = $bdd -> prepare('SELECT FROM new_users WHERE n_usr_name = :n_usr_name AND n_usr_password = :n_usr_password');
+  $resp->execute(array(
+    'n_usr_name' => $_POST['n_usr_name'],
+    'n_usr_password' => $_POST['n_usr_password']
+  ));
+  $resp->closeCursor();
+  return true;
 }
