@@ -8,7 +8,7 @@
   <a href="../controller/n_art_controller.php"><button class="col-xs-1 col-lg-2" type="button">+</button></a>
   <a href="../controller/sign_up_controller.php"><p class="col-xs-1 col-lg-2">Connexion</p></a>
   <?php if ($thisuser) { ?>
-    <a href="#">Log out</a>
+    <a href="../controller/logoutCtrl.php">Log out</a>
   <?php } ?>
 
 
