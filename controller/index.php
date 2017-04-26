@@ -13,4 +13,11 @@ $lastTen = lastTenArticle();
 
 $verifUsr = verifUsr();
 
+$n_usr_name = "";
+
+if($verifUsr)
+{
+  $n_usr_name = $_SESSION['n_usr_name'];
+}
+
 require '../view/view.php';

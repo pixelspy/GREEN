@@ -36,19 +36,14 @@ function addUsr($name, $email, $pwd) {
   return true;
 }
 
-// function lastUsr() {
-//   include 'bdd.php';
-//   $req = $bdd->query('SELECT n_usr_name FROM new_users ORDER BY n_usr_id DESC LIMIT 1');
-//   return $req;
-// }
 
-function verifUsr() {
-  include 'bdd.php';
+
+// function verifUsr() {
+  /*include 'bdd.php';
   $resp = $bdd -> prepare('SELECT FROM new_users WHERE n_usr_name = :n_usr_name AND n_usr_password = :n_usr_password');
   $resp->execute(array(
     'n_usr_name' => $_POST['n_usr_name'],
     'n_usr_password' => $_POST['n_usr_password']
   ));
-  $resp->closeCursor();
-  return true;
-}
+  $resp->closeCursor();*/
+// }
