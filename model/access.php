@@ -20,7 +20,7 @@ function lastArticle() {
 
 function lastTenArticle() {
   include 'bdd.php';
-  $req = $bdd->query('SELECT * FROM post_articles ORDER BY art_id DESC LIMIT 0, 9');
+  $req = $bdd->query('SELECT * FROM post_articles ORDER BY art_id DESC LIMIT 1, 9');
   return $req;
 }
 

@@ -1,5 +1,6 @@
 <?php
 require '../model/access.php';
+include 'session_ctrl.php';
 
 $art_title = "";
 $art_content = "";

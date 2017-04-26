@@ -3,7 +3,6 @@
 require '../model/access.php';
 include 'session_ctrl.php';
 
-
 $last = lastArticle();
 $lastTen = lastTenArticle();
 
@@ -15,4 +14,4 @@ if($theUsr)
 {
   $n_usr_name = $_SESSION['n_usr_name'];
 }
-require '../view/view.php';
+require '../view/profil.php';

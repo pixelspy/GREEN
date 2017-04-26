@@ -1,4 +1,5 @@
-<?php try {
+<?php
+try {
 
   $bdd = new PDO('mysql:host=localhost;dbname=blog_cms;charset=utf8', 'phpmyadmin', 'simplon');
 }
