@@ -12,8 +12,8 @@
       <h2>Sign In</h2>
       <!-- sign in -->
       <form class="row" method="post" action="../controller/sign_up_controller.php">
-        <input type="text" name="n_usr_name" placeholder="Username">
-        <input type="text" name="n_usr_password" value="" placeholder="Password">
+        <input type="text" name="n_usr_name" placeholder="Username" required>
+        <input type="password" name="n_usr_password" value="" placeholder="Password" required>
         <button class="btn btn-block btn-default" type="submit">Submit</button>
       </form>
 
@@ -21,9 +21,9 @@
       <h2>Sign Up</h2>
 
       <form class="row" method="post" action="../controller/sign_up_controller.php">
-        <input type="text" name="n_usr_name" value="" placeholder="Username or Email">
-        <input type="text" name="usr_email" value="" placeholder="Email">
-        <input type="text" name="n_usr_password" value="" placeholder="Password">
+        <input type="text" name="n_usr_name" value="" placeholder="Username" required>
+        <input type="email" name="usr_email" value="" placeholder="Email" required>
+        <input type="password" name="n_usr_password" value="" placeholder="Password" required>
         <button class="btn btn-block btn-default" type="submit">Submit</button>
       </form>
 

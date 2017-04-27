@@ -10,39 +10,56 @@ include 'session_ctrl.php';
 // $_SESSION['n_usr_name'] = "";
 // $_SESSION['n_usr_password'] = "";
 
-$theUsr = false;
+$n_usr_name = "";
+
+if(isset($_POST['n_usr_name'])){
+  $n_usr_name = $_POST['n_usr_name'];
+}
+
+$usr_email = "";
+
+if(isset($_POST['usr_email'])){
+  $n_usr_name = $_POST['usr_email'];
+}
+
+$n_usr_password = "";
+
+if(isset($_POST['n_usr_password'])){
+  $n_usr_password = $_POST['n_usr_password'];
+}
 
 if(isset($_POST['n_usr_name']) and isset($_POST['n_usr_password'])){
-  include '../model/bdd.php';
-  $resp = $bdd -> prepare ('SELECT * FROM new_users WHERE n_usr_name = :n_usr_name AND n_usr_password = :n_usr_password');
-  $resp -> execute(array(
-    'n_usr_name' => $_POST['n_usr_name'],
-    'n_usr_password' => $_POST['n_usr_password']
-  ));
+  $user = false;
 
-  $theUsr = Usr();
+  if(isset($_POST['usr_email'])){
+    // sign up
 
-  $_SESSION['n_usr_name'] = $_POST['n_usr_name'];
-  $_SESSION['n_usr_password'] = $_POST['n_usr_password'];
-
-}
-
-//sign up (adding users to BDD)
-
-
-$newAdd = false;
-
-if(isset($_POST['n_usr_name']) and isset($_POST['usr_email']) and isset($_POST['n_usr_password'])){
-  $n_usr_name = $_POST['n_usr_name'];
-  $usr_email = $_POST['usr_email'];
-  $n_usr_password = $_POST['n_usr_password'];
-
-  $newAdd = addUsr($n_usr_name, $usr_email, $n_usr_password);
-}
-
-
-if($theUsr){
-  header('Location:http://localhost/~mahana/GREEN/controller/index.php') ;
-  } else {
-    require '../view/sign_up.php';
+    $user = addUsr(
+      $_POST['n_usr_name'],
+      $_POST['usr_email'],
+      $_POST['n_usr_password']
+    );
   }
+  else {
+    // sign in
+
+    $user = getUsr(
+      $_POST['n_usr_name'],
+      $_POST['n_usr_password']
+    );
+  }
+
+  if($user)
+  {
+    $_SESSION['n_usr_name'] = $_POST['n_usr_name'];
+    $_SESSION['n_usr_password'] = $_POST['n_usr_password'];
+
+    $thisuser = $_SESSION['n_usr_name'];
+  }
+}
+
+if(Usr()){
+  header('Location:http://localhost/~mahana/GREEN/controller/index.php') ;
+} else {
+  require '../view/sign_up.php';
+}

@@ -12,32 +12,35 @@
   <?php include 'header.php'; ?>
 
   <main class="row">
-<?php foreach ($last as $key) { ?>
-
     <div class="row">
       <img class="col-xs-12 col-lg-6" src="../view/img/1.jpg" alt="">
       <div class="col-xs-12 col-lg-6">
         <h1>Last Article</h1>
-        <h2><?php echo $key['art_title'];?></h2>
-        <p><?php echo $key['art_content'];?></p>
+        <h2>
+        <?php
+          echo $last['art_title']; ?>
+        </h2>
+        <p><?php echo $last['art_content'];?></p>
+        <?php
+        if ($thisuser) { ?>
+          <a href= "../controller/updateArtCtrl.php?art_id=<?php echo $last['art_id']; ?>" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        <?php } ?>
       </div>
     </div>
-<?php } ?>
 
     <div class="row">
       <h1 class="col-xs-12 col-lg-12">Last articles</h1>
     </div>
 
   <section class="row">
-<?php foreach ($lastTen as $e) {
-
-echo '<div class="cardArticles col-xs-12 col-lg-4">
+<?php foreach ($lastTen as $value) { ?>
+    <div class="cardArticles col-xs-12 col-lg-4">
       <a href="../controller/art_controller.php">
       <img src="../view/img/2.jpg" alt="">
-      <h2 class="cardTitle">' . $e["art_title"] . '</h2>
-      <p>' . $e["art_content"] . '</p></a>
-    </div>';
-} ?>
+      <h2 class="cardTitle"><?php echo $value["art_title"]; ?></h2>
+      <p><?php echo $value["art_content"] ?></p></a>
+    </div>
+<?php }?>
     </section>
 
   </main>
