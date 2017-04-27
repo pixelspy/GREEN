@@ -1,10 +1,12 @@
 .header {
   border-bottom: 2px solid grey;
-  display: flex;
-  align-items: center;
-
+  /*background-color: grey;*/
+  height: 15vh;
 }
 
+a{
+  line-height: 15vh;
+}
 figure {
   border: 2px solid grey;
 }
@@ -34,3 +36,22 @@ footer {
   border-top: 2px solid grey;
 
 }
+.red{
+  background-color: black;
+  color: red;
+  width: 40px;
+}
+
+/*.green{
+  background-color: green;
+}
+
+
+
+.blue {
+  background-color: blue;
+}
+
+.pink{
+  background-color: pink;
+}*/
