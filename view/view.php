@@ -36,7 +36,7 @@
 <?php foreach ($lastTen as $value) { ?>
     <div class="cardArticles col-xs-12 col-lg-4">
       <a href="../controller/art_controller.php">
-      <img src="../view/img/2.jpg" alt="">
+      <img src="<?php echo '../view/img/' . $value["art_id"] . '.jpg' ?>" width="500px" alt="">
       <h2 class="cardTitle"><?php echo $value["art_title"]; ?></h2>
       <p><?php echo $value["art_content"] ?></p></a>
     </div>

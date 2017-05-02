@@ -6,7 +6,6 @@ include 'session_ctrl.php';
 
 $last = lastArticle();
 $lastTen = lastTenArticle();
-// $modif_art = modifArticle();
 
 
 $theUsr = "";

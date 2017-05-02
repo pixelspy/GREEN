@@ -43,6 +43,19 @@
 	* matin : présentation
 
 
+## Roadmap V2 :
+
+ * Weekend : 
+	* Bootstrap, CSS
+
+ * Lundi : 
+	* CSS avec JS Front
+
+ * Mardi : 
+	* Front
+	* 
+
+
 ## Recommandations :
 
  * Pensez aux outils comme Sass ou Bootstrap pour faciliter votre travail ;
