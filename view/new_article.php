@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <title>Post Article</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../view/css/style.css">
 </head>
-<body class="container-fluid">
+<body class="container">
   <?php include 'header.php'; ?>
 
   <main class="row">

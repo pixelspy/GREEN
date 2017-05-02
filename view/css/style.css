@@ -1,12 +1,33 @@
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
 .header {
   border-bottom: 2px solid grey;
   /*background-color: grey;*/
   height: 15vh;
 }
 
-a{
-  line-height: 15vh;
+main {
+  margin: 20px;
 }
+
+a {
+  line-height: 15vh;
+  color: green !important;
+}
+
+.btnHeader {
+margin-top: 20px;
+padding-top: -10px;
+height: 50px;
+/*background-color: red;*/
+text-align: center;
+}
+
 figure {
   border: 2px solid grey;
 }
@@ -17,41 +38,30 @@ footer {
 
 .social {
   display: flex;
-
 }
 
 .add-article {
   margin-top: 30px;
   border: 2px solid grey;
   width: 650px;
-
 }
 
-.cardArticles {
-  border: 2px solid grey;
-
+.imgCard {
+  width: 100%;
 }
 
-.cardTitle{
-  border-top: 2px solid grey;
-
-}
-.red{
-  background-color: white;
-  color: red;
-  width: 40px;
+.card {
+	/* column width */
+column-width: 25em;
+	/* space between columns */
+column-gap: 1em;
 }
 
-/*.green{
-  background-color: green;
+.cardAbout {
+  column-width: 90%;
 }
 
-
-
-.blue {
-  background-color: blue;
+.item {
+	display: inline-block;
+	width: 100%;
 }
-
-.pink{
-  background-color: pink;
-}*/

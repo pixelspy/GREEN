@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../view/css/style.css">
     <title>Profil</title>
   </head>
-  <body class="container-fluid">
+  <body class="container">
     <?php include 'header.php'; ?>
 
     <divclass="row">

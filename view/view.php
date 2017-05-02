@@ -8,39 +8,26 @@
   <title>GREEN</title>
 </head>
 
-<body class="container-fluid">
+<body class="container">
   <?php include 'header.php'; ?>
 
   <main class="row">
-    <div class="row">
-      <img class="col-xs-12 col-lg-6" src="../view/img/1.jpg" alt="">
-      <div class="col-xs-12 col-lg-6">
-        <h1>Last Article</h1>
-        <h2>
-        <?php
-          echo $last['art_title']; ?>
-        </h2>
-        <p><?php echo $last['art_content'];?></p>
-        <?php
-        if ($thisuser) { ?>
-          <a href= "../controller/updateArtCtrl.php?art_id=<?php echo $last['art_id']; ?>" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
-        <?php } ?>
-      </div>
-    </div>
+    <?php include 'lastArticle.php'; ?>
 
     <div class="row">
       <h1 class="col-xs-12 col-lg-12">Last articles</h1>
     </div>
 
-  <section class="row">
-<?php foreach ($lastTen as $value) { ?>
-    <div class="cardArticles col-xs-12 col-lg-4">
-      <a href="../controller/art_controller.php">
-      <img src="<?php echo '../view/img/' . $value["art_id"] . '.jpg' ?>" width="500px" alt="">
-      <h2 class="cardTitle"><?php echo $value["art_title"]; ?></h2>
-      <p><?php echo $value["art_content"] ?></p></a>
-    </div>
-<?php }?>
+    <section class="row card">
+      <?php foreach ($lastTen as $value) { ?>
+        <div class="item well">
+          <a href="../controller/art_controller.php">
+            <!-- <?php echo '../view/img/' . $value["art_id"] . '.jpg' ?> -->
+            <img class= "imgCard" src="<?php echo '../view/img/' . $value["art_id"] . '.jpg' ?>" width="500px" alt="">
+            <h2 class=""><?php echo $value["art_title"]; ?></h2></a>
+            <p><?php echo $value["art_content"] ?></p>
+        </div>
+      <?php }?>
     </section>
 
   </main>
