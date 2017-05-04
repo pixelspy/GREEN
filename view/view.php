@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="../view/css/style.css">
+  <?php
+  include '../view/headScript.php'; ?>
   <script src="https://use.fontawesome.com/abd2365aee.js"></script>
   <title>GREEN</title>
 </head>
@@ -14,16 +14,12 @@
   <main class="row">
     <?php include 'lastArticle.php'; ?>
 
-    <div class="row">
-      <h1 class="col-xs-12 col-lg-12">Last articles</h1>
-    </div>
-
     <section class="row card">
       <?php foreach ($lastTen as $value) { ?>
         <div class="item well">
           <a href="../controller/art_controller.php">
             <!-- <?php echo '../view/img/' . $value["art_id"] . '.jpg' ?> -->
-            <img class= "imgCard" src="<?php echo '../view/img/' . $value["art_id"] . '.jpg' ?>" width="500px" alt="">
+            <img class= "img-rounded imgCard" src="<?php echo '../view/img/' . $value["art_id"] . '.jpg' ?>" width="500px" alt="">
             <h2 class=""><?php echo $value["art_title"]; ?></h2></a>
             <p><?php echo $value["art_content"] ?></p>
         </div>

@@ -1,35 +1,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../view/css/style.css">
+    <title>Sign Up</title>
+    <?php
+    include '../view/headScript.php'; ?>
   </head>
   <body class="container">
     <?php include 'header.php'; ?>
 
-    <main class="row">
-      <h2>Sign In</h2>
-      <!-- sign in -->
-      <form class="row" method="post" action="../controller/sign_up_controller.php">
-        <input type="text" name="n_usr_name" placeholder="Username" required>
-        <input type="password" name="n_usr_password" value="" placeholder="Password" required>
-        <button class="btn btn-block btn-default" type="submit">Submit</button>
-      </form>
+    <main class="row well">
+        <h2>Sign Up</h2>
+        <form class="row" method="post" action="../controller/sign_up_controller.php">
 
-      <!-- sign up -->
-      <h2>Sign Up</h2>
+          <div class="form-group">
 
-      <form class="row" method="post" action="../controller/sign_up_controller.php">
-        <input type="text" name="n_usr_name" value="" placeholder="Username" required>
-        <input type="email" name="usr_email" value="" placeholder="Email" required>
-        <input type="password" name="n_usr_password" value="" placeholder="Password" required>
-        <button class="btn btn-block btn-default" type="submit">Submit</button>
-      </form>
-
-
+                <label for="usrEmail">Email address</label>
+                <input type="email" name="usr_email" class="form-control" id="usrEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+            <button class="btn btn-block btn-default" type="submit">Submit</button>
+          </div>
+        </form>
     </main>
-
   </body>
 </html>
-<!-- SIGN IN AND SIGN OUT -->
+
+<!-- <label for="usrName">Email</label>
+<input type="text" id="usrName" name="n_usr_name" value="" placeholder="Username" required>
+<input type="password" name="n_usr_password" value="" placeholder="Password" required> -->

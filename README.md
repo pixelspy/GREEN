@@ -45,14 +45,18 @@
 
 ## Roadmap V2 :
 
- * Weekend : 
-	* Bootstrap, CSS
-
- * Lundi : 
-	* CSS avec JS Front
-
  * Mardi : 
-	* Front
+	* CSS, bootstrap : images
+
+ * Mercredi : 
+	* Jquery
+	* Angular
+
+ * Jeudi :
+	* pagination : le reste des articles s'affichent sur la page d'accueil
+	* les articles du user concerné dans sa page profil
+
+ * Vendredi :
 	* 
 
 

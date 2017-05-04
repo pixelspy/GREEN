@@ -9,8 +9,13 @@
   border-bottom: 2px solid grey;
   /*background-color: grey;*/
   height: 15vh;
-}
 
+}
+.headerBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 main {
   margin: 20px;
 }
@@ -51,14 +56,42 @@ footer {
 }
 
 .card {
+  width: 100%;
+  margin: auto;
 	/* column width */
 column-width: 25em;
 	/* space between columns */
 column-gap: 1em;
 }
 
+.lastArticle {
+  margin-top: 20px;
+}
+.imgLast {
+  height: 100%;
+
+}
+
+.theLastArticle {
+  margin: 30px 0px 30px 0px;
+}
+
+.cardTheLast {
+  width: 100%;
+  margin-top: 20px;
+}
+
 .cardAbout {
-  column-width: 90%;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+.txtAbout {
+  margin-top: 20px;
+  /*text aligné et justifié*/
+  text-align: justify;
 }
 
 .item {
